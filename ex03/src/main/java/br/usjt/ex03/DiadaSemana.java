@@ -32,7 +32,7 @@ public class DiadaSemana {
 		this.diad = diad;
 	}
 	
-	@OneToOne
+/*	@OneToOne
 	private Previsao previ;
 
 	public Previsao getPerfil() {
@@ -44,7 +44,7 @@ public class DiadaSemana {
 		this.previ = previ;
 
 	}
-	
+	*/
 	@Override
 	public int hashCode() {
 		final int prime = 31;

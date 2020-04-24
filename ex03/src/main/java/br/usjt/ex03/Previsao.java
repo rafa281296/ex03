@@ -3,6 +3,8 @@ package br.usjt.ex03;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -13,6 +15,19 @@ public class Previsao {
 	@GeneratedValue
 	private Long id;
 	private String descricao;
+	
+
+	@ManyToOne
+	private Cidade cidade;
+	
+	public Cidade getCidade() {
+		return cidade;
+	}
+	
+	public void setCidade(Cidade cidade) {
+		this.cidade=cidade;
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -50,5 +65,6 @@ public class Previsao {
 			return false;
 		return true;
 	}
+
 
 }
